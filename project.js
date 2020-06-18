@@ -20,6 +20,11 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  let x = [];
+  for (let i = 0; i < numbers.length; i++)
+    if (numbers[i] % 2 === numbers[0]) x.push((numbers += numbers[i]));
+
+  return x;
 }
 
 /**
@@ -36,6 +41,13 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  let character = [];
+
+  for (let i = 0; i < c.length; i++) {
+    if (c[i] === character++) {
+    }
+  }
+  return character;
 }
 
 /**
@@ -55,6 +67,10 @@ function characterCount(string, c) {
  */
 function differences(numbers) {
   // Your code here
+  let Diff = [];
+  for (let i = 1; i < numbers.length; i++)
+    Diff.push(numbers[i] - numbers[i - 1]);
+  return Diff;
 }
 
 /**
@@ -75,6 +91,13 @@ function differences(numbers) {
  */
 function largestIncrement(numbers) {
   // Your code here
+  var x = -1;
+  var y;
+  for (var i = 0; i < numbers.length - 1; i++) {
+    y = Math.abs(numbers[i] - numbers[i + 1]);
+    x = Math.max(x, y);
+  }
+  return x;
 }
 
 /**
@@ -90,6 +113,12 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+  let Array = 0;
+  for (i = 0; i, numbers.length; i++);
+  {
+    if (numbers[i] === x++);
+  }
+  return Array;
 }
 
 /**
@@ -105,6 +134,7 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+  let Cap = [];
 }
 
 /**
