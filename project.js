@@ -20,11 +20,13 @@
  */
 function sumOdds(numbers) {
   // Your code here
-  let x = [];
-  for (let i = 0; i < numbers.length; i++)
-    if (numbers[i] % 2 === numbers[0]) x.push((numbers += numbers[i]));
-
-  return x;
+  let oddArray = [];
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 1) {
+      oddArray += numbers[i];
+    }
+  }
+  return oddArray;
 }
 
 /**
@@ -42,9 +44,9 @@ function sumOdds(numbers) {
 function characterCount(string, c) {
   // Your code here
   let character = [];
-
-  for (let i = 0; i < c.length; i++) {
-    if (c[i] === character++) {
+  for (let i = 0; i < string.length; i++) {
+    if (c.toUpperCase() === string[i].toUpperCase()) {
+      character++;
     }
   }
   return character;
@@ -91,13 +93,13 @@ function differences(numbers) {
  */
 function largestIncrement(numbers) {
   // Your code here
-  var x = -1;
-  var y;
-  for (var i = 0; i < numbers.length - 1; i++) {
-    y = Math.abs(numbers[i] - numbers[i + 1]);
-    x = Math.max(x, y);
+  const diffs = differences(numbers);
+  let largest = diffs[0];
+
+  for (let i = 0; i < diffs.length; i++) {
+    if (diffs[i] > largest) largest = diffs[i];
   }
-  return x;
+  return largest;
 }
 
 /**
@@ -116,7 +118,7 @@ function afterX(numbers, x) {
   let Array = 0;
   for (i = 0; i, numbers.length; i++);
   {
-    if (numbers[i] === x++);
+    if (numbers[i] === x) Array = numbers.slice(i + 1, numbers.length);
   }
   return Array;
 }
@@ -134,7 +136,10 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
-  let Cap = [];
+  let Cap = "";
+  Cap = firstName[0].toUpperCase();
+  Cap += lastName[0].toUpperCase();
+  return Cap;
 }
 
 /**
@@ -149,6 +154,8 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
+  if (string === string.toUpperCase()) return true;
+  else return false;
 }
 
 /**
@@ -163,6 +170,10 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === x) return true;
+  }
+  return false;
 }
 
 /**
@@ -177,6 +188,11 @@ function elementInArray(numbers, x) {
  */
 function reverseString(string) {
   // Your code here
+  let reversed = "";
+  for (let i = 0; i < string.length; i++) {
+    reversed += string[i];
+  }
+  return reversed;
 }
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
